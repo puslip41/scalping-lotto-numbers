@@ -1,0 +1,30 @@
+[project]
+name = "scalping-lotto-numbers"
+version = "0.1.0"
+description = "로또 당첨번호 스크래핑 도구"
+authors = [
+    {name = "puslip41@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "requests>=2.32.5,<3.0.0",
+    "beautifulsoup4>=4.14.2,<5.0.0",
+    "pandas>=2.3.3,<3.0.0",
+    "lxml>=6.0.2,<7.0.0",
+    "selenium>=4.37.0,<5.0.0"
+]
+
+[project.scripts]
+lotto-scraper = "main:main"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.14.1"
+black = "^25.9.0"
+pytest = "^8.4.2"
+
